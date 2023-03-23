@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 200;
+    --saturation: 50%;
+    --background-color: hsl(var(--hue), var(--saturation), 75%);
+    --foreground-color: hsl(var(--hue), var(--saturation), 60%);
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.app{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgparent{
+    width: 30%;
+}
+
+.imgchild{
+    width: 30%;
+    position: relative;
+    right: 95%;
+    top: 320%;
+    z-index: 0
+}
+
+.rocketMove{
+    animation: rocketMove 6.5s;
+}
+
+@keyframes rocketMove {
+    0% {
+        transform: translateY(0%) translateX(0%);
+    }
+
+    100% {
+        transform: translateY(-1000%) translateX(800%);
+        
+    }
+}
+
+.Special1, .Special2{
+    display: none;
+}
+h1{
+    font-size: 5rem;
+    color: var(--foreground-color);
+    text-shadow: 2px 2px #be8383;
+    text-decoration: underline overline;
+    padding-top: 0.5rem;
+}
+
+p{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    color: var(--foreground-color);
+    text-shadow: 1px 1px #554e4e;
+
+}
+
+.section{
+    background-color: #99e682;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 12px #eb8888
+}
+
+.para2{
+    font-size: 1.5rem;
+    color: var(--foreground-color);
+    margin: 1rem;
+}
+
+.pads{
+    display: flex;
+    width: 100%;
+}
+
+.pads > div{
+    width: 100px;
+    height: 100px;
+    flex: 1;
+    border-radius: .3rem;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    color: var(--foreground-color);
+    font-size: larger;
+    translate: 0% 100%;
+}
+
+@keyframes glowing {
+    
+    50% {
+      background-color: #99e682;
+      box-shadow: 0 0 20px #4c7540;
+    }
+    100% {
+      background-color: #e4eae2;
+      box-shadow: 0 0 5px #6c706a;
+    }
+  }
+
+.padPlay{
+    animation: glowing 2ms;
+}
+
+.pad1{
+    background-color: rgb(215, 78, 78);
+    z-index: 1;
+}
+
+.pad2{
+    background-color: rgb(114, 204, 82);
+    z-index: 1;
+}
+
+.pad3{
+    background-color: rgb(73, 110, 126);
+}
+
+.pad4{
+    background-color: rgb(229, 81, 204);
+}
+
+.pad5{
+    background-color: rgb(224, 125, 71);
+}
+
+.pad6{
+    background-color: rgb(219, 219, 86);
+}
