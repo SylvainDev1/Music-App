@@ -9,6 +9,7 @@
     --saturation: 50%;
     --background-color: hsl(var(--hue), var(--saturation), 75%);
     --foreground-color: hsl(var(--hue), var(--saturation), 60%);
+    --pads-color: hsl(var(--hue), var(--saturation), 30%);
 }
 
 body{
@@ -99,7 +100,7 @@ p{
 span{
     display: flex;
     justify-content: center;
-    color: var(--foreground-color);
+    color: var(--pads-color);
     font-size: larger;
     translate: 0% 100%;
 }
